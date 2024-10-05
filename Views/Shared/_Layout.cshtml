@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickBuy Clone</title>
+    <link rel="stylesheet" href="~/css/Main.css" asp-append-version="true"> <!-- Liên kết đúng đến file site.css -->
+    <link rel="stylesheet" href="~/css/Header.css" asp-append-version="true"> <!-- Liên kết đúng đến file site.css -->
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <img src="\img\clickbuy-logo.webp" alt="ClickBuy Logo"> <!-- Kiểm tra đường dẫn hình ảnh -->
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Bạn cần tìm gì...">
+                <button><img src="~/img/search-icon-2048x2048-cmujl7en.png" alt="Search Icon"></button> <!-- Đảm bảo biểu tượng tìm kiếm hiển thị đúng -->
+            </div>
+            <div class="header-buttons">
+                <button onclick="location.href='@Url.Action("Index","Home")'">Trang Chủ</button>
+                <button>Chính sách bảo hành</button>
+                <button>Hệ thống cửa hàng</button>
+                <button onclick="location.href='@Url.Action("DangNhap", "User")'">Đăng Nhập</button>
+                <button onclick="location.href='@Url.Action("Admin", "Home")'">Tài khoản</button>
+
+            </div>
+        </div>
+        <div class="promo-bar">
+            <marquee>iPhone 16 Series - Đủ màu sẵn hàng giao ngay</marquee> <!-- Thanh thông báo khuyến mãi --> 
+        </div>
+    </header>
+
+    <!-- Phần Razor này được thêm đúng vị trí -->
+    @RenderBody()
+    <!-- Footer -->
+    <footer>
+        <p>&copy Siêu Nhân Điện Quang</p>
+    </footer>
+    
+</body>
+</html>

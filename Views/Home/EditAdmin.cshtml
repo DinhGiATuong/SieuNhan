@@ -1,0 +1,38 @@
+﻿@* @model AdminInfo
+
+@{
+    ViewData["Title"] = "Sửa Thông Tin Quản Trị Viên";
+} *@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"> <!-- File CSS tổng quát -->
+    <link rel="stylesheet" href="~/css/admin.css" asp-append-version="true"> <!-- File CSS riêng cho trang Admin -->
+</head>
+<body>
+
+    <header>
+        <h1>@ViewData["Title"]</h1>
+    </header>
+
+    <main>
+        <form method="post" asp-action="UpdateAdmin">
+            <label for="username">Tên Đăng Nhập:</label>
+            <input type="text" id="username" name="Username" value="@Model.Username" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="Email" value="@Model.Email" required />
+
+            <label for="role">Vai Trò:</label>
+            <input type="text" id="role" name="Role" value="@Model.Role" required />
+
+            <input type="submit" value="Cập Nhật" />
+        </form>
+    </main>
+
+</body>
+</html>
